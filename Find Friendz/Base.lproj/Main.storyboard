@@ -1,25 +1,302 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
+        <!--Table View Controller-->
+        <scene sceneID="KHh-Oi-ESm">
+            <objects>
+                <viewController id="vdM-Uf-Se2" customClass="TableViewController" customModule="Find_Friendz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="34Q-Ja-oQp"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Vc-3C-sdn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ns7-ev-Rkj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G7c-8c-9Yc">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="hjK-HP-2eM">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hjK-HP-2eM" id="Tpc-eP-c7y">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="GOB-bb-UI5" kind="show" identifier="tableCell" id="KT5-mC-ppP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="vdM-Uf-Se2" id="wkV-MB-SBg"/>
+                                    <outlet property="delegate" destination="vdM-Uf-Se2" id="j9G-Mn-TFn"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="R2K-6d-i7D">
+                                <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vdM-Uf-Se2" id="SsO-gg-xia"/>
+                                </connections>
+                            </searchBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gwp-rI-Y9C">
+                                <rect key="frame" x="59" y="77" width="226" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ryc-Uw-QMU">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Arkadaşlarım" id="VDY-H1-tOe">
+                                        <barButtonItem key="leftBarButtonItem" title="Çıkış yap" id="LhS-Gh-p9A">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="logout" id="5PG-oE-Z1l"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G7c-8c-9Yc" firstAttribute="top" secondItem="Ryc-Uw-QMU" secondAttribute="bottom" id="J11-hJ-l0c"/>
+                            <constraint firstItem="G7c-8c-9Yc" firstAttribute="top" secondItem="Ryc-Uw-QMU" secondAttribute="bottom" id="SrL-1G-a9r"/>
+                            <constraint firstItem="Ryc-Uw-QMU" firstAttribute="top" secondItem="34Q-Ja-oQp" secondAttribute="bottom" id="UuE-8d-Jr0"/>
+                            <constraint firstAttribute="trailing" secondItem="G7c-8c-9Yc" secondAttribute="trailing" id="Yx0-yD-a4j"/>
+                            <constraint firstItem="G7c-8c-9Yc" firstAttribute="leading" secondItem="ns7-ev-Rkj" secondAttribute="leading" id="aIv-mC-sDT"/>
+                            <constraint firstAttribute="trailing" secondItem="Ryc-Uw-QMU" secondAttribute="trailing" id="co0-Fc-wly"/>
+                            <constraint firstItem="Ryc-Uw-QMU" firstAttribute="leading" secondItem="ns7-ev-Rkj" secondAttribute="leading" id="ixz-tg-74a"/>
+                            <constraint firstItem="9Vc-3C-sdn" firstAttribute="top" secondItem="G7c-8c-9Yc" secondAttribute="bottom" id="jmh-iu-CVO"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="R2K-6d-i7D"/>
+                                <exclude reference="Gwp-rI-Y9C"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Zbn-UN-J3v" id="wt5-PW-BjY"/>
+                        <outlet property="tableView" destination="G7c-8c-9Yc" id="Tai-Ni-UMW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnX-Xi-3t3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Zbn-UN-J3v">
+                    <connections>
+                        <outlet property="delegate" destination="vdM-Uf-Se2" id="DzQ-y0-3Ih"/>
+                        <outlet property="searchBar" destination="R2K-6d-i7D" id="H8n-Pg-o3s"/>
+                        <outlet property="searchContentsController" destination="vdM-Uf-Se2" id="S7P-CK-qGS"/>
+                        <outlet property="searchResultsDataSource" destination="vdM-Uf-Se2" id="gWi-j0-ZpO"/>
+                        <outlet property="searchResultsDelegate" destination="vdM-Uf-Se2" id="gbi-CZ-kAH"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="901" y="1187"/>
+        </scene>
+        <!--Location View Controller-->
+        <scene sceneID="6jZ-hf-95y">
+            <objects>
+                <viewController id="GOB-bb-UI5" customClass="LocationViewController" customModule="Find_Friendz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fwn-hk-B8C"/>
+                        <viewControllerLayoutGuide type="bottom" id="R8x-uR-65E"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DHa-qR-uGV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VDG-ZH-fvT">
+                                <rect key="frame" x="0.0" y="65" width="320" height="368"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZ0-5H-H6R">
+                                <rect key="frame" x="6" y="28" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="vdM-Uf-Se2" kind="show" id="GRh-EZ-1bI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uX5-Cl-OxX">
+                                <rect key="frame" x="122" y="460" width="76" height="30"/>
+                                <state key="normal" title="Yol tarifi"/>
+                                <connections>
+                                    <action selector="direction:" destination="GOB-bb-UI5" eventType="touchUpInside" id="MUs-RC-1Ca"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uX5-Cl-OxX" firstAttribute="top" secondItem="VDG-ZH-fvT" secondAttribute="bottom" constant="27" id="2dW-fk-CX0"/>
+                            <constraint firstItem="uX5-Cl-OxX" firstAttribute="leading" secondItem="DHa-qR-uGV" secondAttribute="leading" constant="122" id="Pts-4D-afr"/>
+                            <constraint firstItem="R8x-uR-65E" firstAttribute="top" secondItem="VDG-ZH-fvT" secondAttribute="bottom" constant="135" id="Zrg-RP-Gn3"/>
+                            <constraint firstAttribute="trailing" secondItem="uX5-Cl-OxX" secondAttribute="trailing" constant="122" id="csK-9g-ijf"/>
+                            <constraint firstAttribute="trailing" secondItem="VDG-ZH-fvT" secondAttribute="trailing" id="ehh-6x-mZ7"/>
+                            <constraint firstItem="VDG-ZH-fvT" firstAttribute="top" secondItem="fwn-hk-B8C" secondAttribute="bottom" constant="45" id="j4X-4g-jxx"/>
+                            <constraint firstItem="VDG-ZH-fvT" firstAttribute="leading" secondItem="DHa-qR-uGV" secondAttribute="leading" id="pRt-Eb-U4o"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="map" destination="VDG-ZH-fvT" id="Zdu-tA-KbR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EF7-fH-n50" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1424" y="542"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Find_Friendz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="xRp-qE-pLq">
+                                <rect key="frame" x="103" y="85" width="99" height="174"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kullanıcı Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sbm-f9-cs6">
+                                        <rect key="frame" x="0.0" y="0.0" width="99" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vQE-Vh-4Ng">
+                                        <rect key="frame" x="0.0" y="74" width="99" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Rh-P0-Aa9">
+                                        <rect key="frame" x="0.0" y="144" width="99" height="30"/>
+                                        <state key="normal" title="Kayıt Ol"/>
+                                        <connections>
+                                            <action selector="kayıtButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hH3-11-wat"/>
+                                            <segue destination="MUO-ao-th0" kind="show" id="M3L-Nz-0RW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Find Friende Hoşgeldiniz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orj-bS-oec">
+                                <rect key="frame" x="58" y="46" width="189" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ckV-RG-Bj5">
+                                <rect key="frame" x="122" y="269" width="61" height="30"/>
+                                <state key="normal" title="Giriş Yap"/>
+                                <connections>
+                                    <action selector="girisYap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AVG-k5-ySp"/>
+                                    <segue destination="vdM-Uf-Se2" kind="show" id="ist-iK-ELE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xRp-qE-pLq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-7.5" id="06W-FO-SuB"/>
+                            <constraint firstAttribute="trailing" secondItem="ckV-RG-Bj5" secondAttribute="trailing" constant="137" id="4GD-vs-cWO"/>
+                            <constraint firstItem="orj-bS-oec" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="58" id="HaP-2U-UnP"/>
+                            <constraint firstItem="xRp-qE-pLq" firstAttribute="top" secondItem="orj-bS-oec" secondAttribute="bottom" constant="18" id="d9g-be-gPa"/>
+                            <constraint firstItem="xRp-qE-pLq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-112.5" id="eJ5-ee-stB"/>
+                            <constraint firstItem="orj-bS-oec" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="26" id="h7t-ff-2q3"/>
+                            <constraint firstItem="ckV-RG-Bj5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="122" id="m2U-33-sK1"/>
+                            <constraint firstAttribute="trailing" secondItem="orj-bS-oec" secondAttribute="trailing" constant="73" id="mvg-cv-hUc"/>
+                            <constraint firstItem="ckV-RG-Bj5" firstAttribute="top" secondItem="xRp-qE-pLq" secondAttribute="bottom" constant="10" id="vMg-BJ-0qd"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="kAdiTextField" destination="sbm-f9-cs6" id="Be5-te-vkm"/>
+                        <outlet property="sifreTextField" destination="vQE-Vh-4Ng" id="4In-BS-z8P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="444" y="343"/>
+        </scene>
+        <!--Kayit View Controller-->
+        <scene sceneID="5IG-Xi-a4v">
+            <objects>
+                <viewController id="MUO-ao-th0" customClass="KayitViewController" customModule="Find_Friendz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XC1-Nn-g9i"/>
+                        <viewControllerLayoutGuide type="bottom" id="VK1-5E-tt4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4MZ-sg-CQ6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Şifre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f4y-hd-Xsp">
+                                <rect key="frame" x="78" y="189" width="162" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kayıt Formu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Do-PQ-wfi">
+                                <rect key="frame" x="102" y="85" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UEr-Ay-zKJ">
+                                <rect key="frame" x="79" y="237" width="162" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OVi-gt-VvC">
+                                <rect key="frame" x="133" y="321" width="53" height="30"/>
+                                <state key="normal" title="Kayıt Ol"/>
+                                <connections>
+                                    <action selector="kayit:" destination="MUO-ao-th0" eventType="touchUpInside" id="PUv-8I-hrR"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Soyad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AGb-fU-dEE">
+                                <rect key="frame" x="78" y="189" width="162" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Kullanıcı Adı" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7CL-qK-Q8X">
+                                <rect key="frame" x="78" y="136" width="162" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvg-FW-kMc">
+                                <rect key="frame" x="37" y="28" width="63" height="30"/>
+                                <state key="normal" title="Anasayfa"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="homePage" id="YFO-6s-aOc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="AGb-fU-dEE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="email" destination="UEr-Ay-zKJ" id="5bj-t2-P8Q"/>
+                        <outlet property="kayitAd" destination="7CL-qK-Q8X" id="8Bi-Js-TxR"/>
+                        <outlet property="kayitSifre" destination="f4y-hd-Xsp" id="OEO-32-N25"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Br1-Fs-hYi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="961" y="-136"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="GRh-EZ-1bI"/>
+        <segue reference="5PG-oE-Z1l"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A9C0ED539DE2F0AF58F4C99F /* Pods_Find_Friendz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5F58271B7962FA7FAE7C6B /* Pods_Find_Friendz.framework */; };
+		EA1F9B0A1CE8E27200067B2F /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1F9B091CE8E27200067B2F /* TableViewController.swift */; };
+		EA1F9B0C1CEA5C4300067B2F /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1F9B0B1CEA5C4300067B2F /* LocationViewController.swift */; };
 		EA706D351CE7CEC50081AFD3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA706D341CE7CEC50081AFD3 /* AppDelegate.swift */; };
 		EA706D371CE7CEC50081AFD3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA706D361CE7CEC50081AFD3 /* ViewController.swift */; };
 		EA706D3A1CE7CEC50081AFD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA706D381CE7CEC50081AFD3 /* Main.storyboard */; };
 		EA706D3C1CE7CEC50081AFD3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA706D3B1CE7CEC50081AFD3 /* Assets.xcassets */; };
 		EA706D3F1CE7CEC50081AFD3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA706D3D1CE7CEC50081AFD3 /* LaunchScreen.storyboard */; };
+		EAED271F1CE8A3FF00D8FC71 /* KayitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAED271E1CE8A3FF00D8FC71 /* KayitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		221CCA8F28EEF7E957A78FEB /* Pods-Find Friendz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Find Friendz.release.xcconfig"; path = "Pods/Target Support Files/Pods-Find Friendz/Pods-Find Friendz.release.xcconfig"; sourceTree = "<group>"; };
+		4E5F58271B7962FA7FAE7C6B /* Pods_Find_Friendz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Find_Friendz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1F9B091CE8E27200067B2F /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		EA1F9B0B1CEA5C4300067B2F /* LocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		EA706D311CE7CEC50081AFD3 /* Find Friendz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Find Friendz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA706D341CE7CEC50081AFD3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA706D361CE7CEC50081AFD3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,8 @@
 		EA706D3B1CE7CEC50081AFD3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA706D3E1CE7CEC50081AFD3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA706D401CE7CEC50081AFD3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EAED271E1CE8A3FF00D8FC71 /* KayitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KayitViewController.swift; sourceTree = "<group>"; };
+		F24CDAD4533705E7C23C3315 /* Pods-Find Friendz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Find Friendz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Find Friendz/Pods-Find Friendz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9C0ED539DE2F0AF58F4C99F /* Pods_Find_Friendz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54E72BB06C46FB7BB5A2BB97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E5F58271B7962FA7FAE7C6B /* Pods_Find_Friendz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EA706D281CE7CEC50081AFD3 = {
 			isa = PBXGroup;
 			children = (
 				EA706D331CE7CEC50081AFD3 /* Find Friendz */,
 				EA706D321CE7CEC50081AFD3 /* Products */,
+				F621AEB424486C46EFD7409D /* Pods */,
+				54E72BB06C46FB7BB5A2BB97 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +81,20 @@
 				EA706D3B1CE7CEC50081AFD3 /* Assets.xcassets */,
 				EA706D3D1CE7CEC50081AFD3 /* LaunchScreen.storyboard */,
 				EA706D401CE7CEC50081AFD3 /* Info.plist */,
+				EAED271E1CE8A3FF00D8FC71 /* KayitViewController.swift */,
+				EA1F9B091CE8E27200067B2F /* TableViewController.swift */,
+				EA1F9B0B1CEA5C4300067B2F /* LocationViewController.swift */,
 			);
 			path = "Find Friendz";
+			sourceTree = "<group>";
+		};
+		F621AEB424486C46EFD7409D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F24CDAD4533705E7C23C3315 /* Pods-Find Friendz.debug.xcconfig */,
+				221CCA8F28EEF7E957A78FEB /* Pods-Find Friendz.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA706D431CE7CEC50081AFD3 /* Build configuration list for PBXNativeTarget "Find Friendz" */;
 			buildPhases = (
+				DBE54F7F68B7CDB791F8E82C /* Check Pods Manifest.lock */,
 				EA706D2D1CE7CEC50081AFD3 /* Sources */,
 				EA706D2E1CE7CEC50081AFD3 /* Frameworks */,
 				EA706D2F1CE7CEC50081AFD3 /* Resources */,
+				D89347AA8B74B7F7633EEC48 /* Embed Pods Frameworks */,
+				C32EA9FAA8FB1EE9214630DE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +132,7 @@
 				TargetAttributes = {
 					EA706D301CE7CEC50081AFD3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = VQ72FL7SDS;
 					};
 				};
 			};
@@ -130,13 +167,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		C32EA9FAA8FB1EE9214630DE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Find Friendz/Pods-Find Friendz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D89347AA8B74B7F7633EEC48 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Find Friendz/Pods-Find Friendz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBE54F7F68B7CDB791F8E82C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EA706D2D1CE7CEC50081AFD3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA1F9B0C1CEA5C4300067B2F /* LocationViewController.swift in Sources */,
 				EA706D371CE7CEC50081AFD3 /* ViewController.swift in Sources */,
 				EA706D351CE7CEC50081AFD3 /* AppDelegate.swift in Sources */,
+				EAED271F1CE8A3FF00D8FC71 /* KayitViewController.swift in Sources */,
+				EA1F9B0A1CE8E27200067B2F /* TableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,8 +335,10 @@
 		};
 		EA706D441CE7CEC50081AFD3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F24CDAD4533705E7C23C3315 /* Pods-Find Friendz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Find Friendz/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "asimoglu.Find-Friendz";
@@ -258,8 +348,10 @@
 		};
 		EA706D451CE7CEC50081AFD3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 221CCA8F28EEF7E957A78FEB /* Pods-Find Friendz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Find Friendz/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "asimoglu.Find-Friendz";
@@ -286,6 +378,7 @@
 				EA706D451CE7CEC50081AFD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
